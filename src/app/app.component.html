@@ -1,13 +1,14 @@
 <div>
-  <div class="loader"
-       [hidden]="!initializing">
-    <div class="message">
-      <i class="fas fa-sync fa-spin"></i>
-      <h2>Loading</h2>
-      <h5>{{timeElapsed}}</h5>
+  <div *ngIf="initializing">
+    <div class="loader">
+      <div class="message">
+        <i class="fas fa-sync fa-spin"></i>
+        <h2>Loading</h2>
+        <h5>{{timeElapsed}}</h5>
+      </div>
     </div>
   </div>
-  <div [hidden]="initializing">
+  <div *ngIf="!initializing">
     <app-cage #appCage
               [map]="map"></app-cage>
   </div>
