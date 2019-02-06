@@ -1,4 +1,10 @@
-import { Component, OnInit, OnChanges, ElementRef, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnChanges,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-snake',
@@ -7,7 +13,7 @@ import { Component, OnInit, OnChanges, ElementRef, AfterViewInit, Output, EventE
 })
 export class SnakeComponent implements OnInit, OnChanges, AfterViewInit {
 
-  constructor(private elem: ElementRef) { }
+  constructor(private elem: ElementRef) {}
 
   snake;
   top = 100;

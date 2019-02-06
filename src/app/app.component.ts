@@ -1,6 +1,16 @@
-import { Component, EventEmitter, OnInit, AfterViewInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
-import { MapService } from './sevices/map.service';
-import { Map } from './classes/map';
+import {
+  AfterViewInit,
+  Component,
+  EventEmitter,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
+import {
+  Map
+} from './classes/map';
+import {
+  MapService
+} from './sevices/map.service';
 
 @Component({
   selector: 'app-root',
@@ -27,8 +37,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       this.initializing = false;
     });
   }
-  ngAfterViewInit(): void {
-  }
+  ngAfterViewInit(): void { }
 
   ngOnDestroy(): void {
     this.timeFinished.unsubscribe();
@@ -47,9 +56,3 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 }
-
-
-
-
-
-
